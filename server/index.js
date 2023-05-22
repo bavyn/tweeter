@@ -2,12 +2,15 @@
 
 // Basic express setup:
 
-const PORT          = 8080;
-const express       = require("express");
-const bodyParser    = require("body-parser");
-const app           = express();
+const PORT = 8080;
+const express = require("express");
+//const bodyParser    = require("body-parser");
+const app = express();
+const morgan = require("morgan");
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(morgan('dev'));
+// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // The in-memory database of tweets. It's a basic object with an array in it.
