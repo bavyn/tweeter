@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#tweeter-logo {
+  display: flex;
+  font-family: 'Bungee';
+  align-items: center;
+  margin: 1.5em;
+}
+
+.container {
+  display: flex;
+  margin: 1.5em;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+nav i {
+  color: tomato;
+}
