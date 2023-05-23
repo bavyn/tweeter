@@ -28,3 +28,13 @@ body {
  nav {
   font-family: 'Bungee', sans-serif;
  }
+
+ /* main container */
+ .container {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f4f1ec;
+ }
