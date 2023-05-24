@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -33,16 +34,21 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
+
+    <!-- Header -->
     <header>
       <div class="avatar">
         <img src="/images/profile-hex.png">
       </div>
       <div>
-        <h2><strong>Karma</strong> Mann</h2>
+        <h2>Karma</h2>
       </div>
     </header>
+
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <!-- Create a new tweet -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form>
@@ -54,8 +60,39 @@
           </div>
         </form>
       </section>
+
+      <!-- All tweets -->
+      <article>
+
+        <div class="tweet-head">
+          <div class="tweeter-info">
+            <img src="/images/profile-hex.png">
+            <span>tweeter's name</span>
+          </div>
+          <span id="username">@username</span>
+        </div>
+
+        <div class="posted-tweet">
+          <p>If I have seen further, it is by standing on the shoulders of giants.</p>
+        </div>
+
+        <div class="tweet-foot">
+          <span id="tweet-date">10 days ago</span>
+          <div class="tweet-actions">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
     </main>
-    
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
