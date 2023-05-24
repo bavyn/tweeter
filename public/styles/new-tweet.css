@@ -1,14 +1,3 @@
-/* 
-.container {
-  display: flex;
-  padding-left: 5%;
-  padding-right: 5%;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #f4f1ec;
- } 
- */
-
  .new-tweet {
   display: flex;
   align-items: center;

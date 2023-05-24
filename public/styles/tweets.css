@@ -1,7 +1,11 @@
- article {
+.tweet-container {
+  margin-bottom: 30px;
+}
+
+.tweet {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
+
   justify-content: space-between;
   width: 75%;
   height: 250px;
@@ -13,11 +17,11 @@
   padding-bottom: 20px;
  }
 
- article :hover {
+.tweet:hover {
   box-shadow: #B6B3AB;
  }
 
-.tweet-head {
+.tweet-header {
   display: flex;
   justify-content: space-between;
 }
