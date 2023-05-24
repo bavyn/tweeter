@@ -1,15 +1,15 @@
 .tweet-container {
   margin-bottom: 30px;
+  padding-left: 25%;
 }
 
 .tweet {
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
-  width: 75%;
-  height: 250px;
-  border: 2px solid #545149;;
+  width: 100%;
+  border: 2px solid #545149;
+  border-radius: 10px;
   margin: 2em 0 0 0;
   padding-left: 10px;
   padding-right: 10px;
@@ -18,7 +18,8 @@
  }
 
 .tweet:hover {
-  box-shadow: #B6B3AB;
+  box-shadow: 5px 5px #B6B3AB;
+  transition: 0.3s ease-in-out;
  }
 
 .tweet-header {
@@ -43,4 +44,19 @@
 .tweet-foot {
   display: flex;
   justify-content: space-between;
+  padding-top: 5px;
 }
+
+#flag:hover {
+  color: #D89709;
+}
+
+#retweet:hover {
+  color: #D89709;
+}
+
+#heart:hover {
+  color: #D89709;
+}
+
+
