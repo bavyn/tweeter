@@ -1,6 +1,7 @@
 .tweet-container {
-  margin-bottom: 30px;
-  padding-left: 25%;
+  margin-bottom: 1em;
+  align-self: flex-end;
+  width: 80%
 }
 
 .tweet {

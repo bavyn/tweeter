@@ -1,22 +1,22 @@
  .new-tweet {
   display: flex;
-  align-items: center;
-
+  flex-direction: column;
+  align-self: flex-end;
+  margin-top: 1em;
+  width: 80%
  }
 
  #post-tweet {
   display: flex;
   flex-direction: column;
-  width: 80%
+  width: 100%
  }
-
 
  #tweet-text {
   display: flex;
   border-style: hidden;
-  border-bottom: 5px solid #4056A1;
+  border-bottom: 0.2em solid #4056A1;
   background-color: #f4f1ec;
-
   line-height: 1;
   resize: none;
  }
@@ -24,7 +24,7 @@
  .new-tweet-bottom {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+  padding: 0.2em;
   font-family: 'Bungee', sans-serif;
  }
 
