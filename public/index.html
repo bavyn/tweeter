@@ -60,7 +60,7 @@
     <!-- Create a new tweet -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form>
+      <form id="post-tweet">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class="new-tweet-bottom">
@@ -71,31 +71,7 @@
     </section>
 
     <!-- All tweets -->
-    <section class="tweet-container">
-      <article class="tweet">
-
-        <header class="tweet-header">
-          <div class="tweeter-info">
-            <img class="post-avatar" src="/images/profile-hex.png">
-            <span>tweeter's name</span>
-          </div>
-          <span class="username">@username</span>
-        </header>
-
-        <div class="posted-tweet">
-          <p>If I have seen further, it is by standing on the shoulders of giants.</p>
-        </div>
-
-        <div class="tweet-foot">
-          <span class="tweet-date">10 days ago</span>
-          <div class="tweet-actions">
-            <i id="flag" class="fa-solid fa-flag"></i>
-            <i id="retweet" class="fa-solid fa-retweet"></i>
-            <i id="heart" class="fa-solid fa-heart"></i>
-          </div>
-        </div>
-      </article>
-    </section>
+    <section class="tweet-container"></section>
 
   </main>
 </body>

@@ -9,6 +9,7 @@ $(document).ready(() => {
 
   console.log('document is ready');
 
+  // grab the tweet container section
   const $tweetSection = $(`.tweet-container`);
 
   // test tweet data to be deleted
@@ -36,6 +37,29 @@ $(document).ready(() => {
       "created_at": 1684886049923
     }
   ];
+
+  // grab the form
+  const $form = $('#post-tweet')
+
+  // submit form handler
+  $form.on('submit', (event) => {
+    // prevent the default behaviour of the submit event (data submission and page refresh)
+    event.preventDefault();
+    console.log('form has been submitted');
+
+    // url encode
+    const urlEncodedString = $form.serialize();
+    console.log(urlEncodedString);
+
+    // make a POST request to the server
+    $.ajax({
+      url: 'http://localhost:8080/tweets',
+      method: 'POST',
+      data: urlEncodedString
+    }).then(() => {
+      console.log('tweet posted successfully');
+    });
+  });
 
   // function implementation
   const createTweetElement = (tweet) => {
@@ -68,11 +92,8 @@ $(document).ready(() => {
   };
 
   const renderTweets = (tweets) => {
-    //loop thru tweets
     for (const tweet of tweets) {
-    // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
-    // takes return value and appends it to the tweets container
       $tweetSection.prepend($tweet);
     }
   };
