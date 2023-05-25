@@ -24,12 +24,20 @@
 
 .tweet-header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  height: 40px;
 }
 
 .tweeter-info {
   display: flex;
+align-items: center;
+}
+
+.post-avatar {
   height: 40px;
+  padding-right: 10px;
 }
 
 #username {
