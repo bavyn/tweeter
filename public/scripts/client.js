@@ -12,40 +12,6 @@ $(document).ready(() => {
   // grab the tweet container section
   const $tweetSection = $(`.tweet-container`);
 
-  // grab the form
-  const $postTweet = $("#post-tweet")
-
-  // submit form handler
-  $postTweet.on('submit', (event) => {
-    // prevent the default behaviour of the submit event (data submission and page refresh)
-    event.preventDefault();
-    console.log('form has been submitted');
-
-    // url encode
-    const urlEncodedString = $postTweet.serialize();
-    console.log(urlEncodedString);
-
-    // alert on error
-    // repeating some code from char-counter .. opportunity to make this more DRY?
-    const maxCount = 140;
-    const currentCount = $postTweet.find("#tweet-text").val().length;
-    if (!currentCount) {
-      return alert('You cannot post a blank tweet');
-    }
-    if (currentCount > maxCount) {
-      return alert('Please reduce character count');
-    }
-    
-    // make a POST request to the server
-    $.ajax({
-      url: 'http://localhost:8080/tweets',
-      method: 'POST',
-      data: urlEncodedString
-    }).then(() => {
-      console.log('tweet posted successfully');
-    });
-  });
-
   // function implementation
   const createTweetElement = (tweet) => {
     let $tweet = $(`
@@ -99,5 +65,42 @@ $(document).ready(() => {
   };
 
   loadTweets();
+
+    // grab the form
+    const $postTweet = $("#post-tweet")
+
+    // submit form handler
+    $postTweet.on('submit', (event) => {
+      // prevent the default behaviour of the submit event (data submission and page refresh)
+      event.preventDefault();
+      console.log('form has been submitted');
+  
+      // url encode
+      const urlEncodedString = $postTweet.serialize();
+      console.log(urlEncodedString);
+  
+      // alert on error
+      // repeating some code from char-counter .. opportunity to make this more DRY?
+      const maxCount = 140;
+      const currentCount = $postTweet.find("#tweet-text").val().length;
+      if (!currentCount) {
+        return alert('You cannot post a blank tweet');
+      }
+      if (currentCount > maxCount) {
+        return alert('Please reduce character count');
+      }
+      
+      // make a POST request to the server
+      $.ajax({
+        url: 'http://localhost:8080/tweets',
+        method: 'POST',
+        data: urlEncodedString
+      }).then(() => {
+        console.log('tweet posted successfully');
+        loadTweets();
+        $(".counter").text(140); // reset counter
+        $postTweet.find("#tweet-text").val("");
+      });
+    });
 
 });
