@@ -12,6 +12,13 @@ $(document).ready(() => {
   // grab the tweet container section
   const $tweetSection = $(`.tweet-container`);
 
+  // function to escape text to mitigate vulnerability to xss
+  const safe = (str) => {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // function implementation
   const createTweetElement = (tweet) => {
     let $tweet = $(`
@@ -19,18 +26,18 @@ $(document).ready(() => {
 
         <header class="tweet-header">
           <div class="tweeter-info">
-            <img class="post-avatar" src=${tweet.user.avatars}>
-            <span>${tweet.user.name}</span>
+            <img class="post-avatar" src=${safe(tweet.user.avatars)}>
+            <span>${safe(tweet.user.name)}</span>
           </div>
-          <span class="username">${tweet.user.handle}</span>
+          <span class="username">${safe(tweet.user.handle)}</span>
         </header>
 
         <div class="posted-tweet">
-          <p>${tweet.content.text}</p>
+          <p>${safe(tweet.content.text)}</p>
         </div>
 
         <div class="tweet-foot">
-          <span class="tweet-date">${timeago.format(tweet.created_at)}</span>
+          <span class="tweet-date">${safe(timeago.format(tweet.created_at))}</span>
           <div class="tweet-actions">
             <i id="flag" class="fa-solid fa-flag"></i>
             <i id="retweet" class="fa-solid fa-retweet"></i>
