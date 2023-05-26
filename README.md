@@ -3,7 +3,7 @@
 Tweeter is a simple, single-page Twitter clone, built with HTML, CSS, JS, jQuery, AJAX, Node, and Express.
 
 ## Final Product
-!["](https://github.com/bavyn/tweeter/blob/master/docs/tweeter.mp4)
+https://github.com/bavyn/tweeter/assets/129702902/0cc46b84-c720-4e75-9212-8096ceeaa09c
 
 ## Getting Started
 
