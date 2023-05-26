@@ -1,13 +1,4 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-
 $(document).ready(() => {
-
-  console.log('document is ready');
 
   // grab the tweet container section
   const $tweetSection = $(`.tweet-container`);
@@ -23,7 +14,6 @@ $(document).ready(() => {
   const createTweetElement = (tweet) => {
     let $tweet = $(`
       <article class="tweet">
-
         <header class="tweet-header">
           <div class="tweeter-info">
             <img class="post-avatar" src=${safe(tweet.user.avatars)}>
@@ -31,11 +21,9 @@ $(document).ready(() => {
           </div>
           <span class="username">${safe(tweet.user.handle)}</span>
         </header>
-
         <div class="posted-tweet">
           <p>${safe(tweet.content.text)}</p>
         </div>
-
         <div class="tweet-foot">
           <span class="tweet-date">${safe(timeago.format(tweet.created_at))}</span>
           <div class="tweet-actions">
@@ -65,7 +53,6 @@ $(document).ready(() => {
       url: 'http://localhost:8080/tweets',
       method: 'GET',
       success: (tweets) => {
-        console.log(tweets);
         renderTweets(tweets);
       }
     });
@@ -76,19 +63,15 @@ $(document).ready(() => {
   // grab the form
   const $postTweet = $("#post-tweet")
 
-
-
   // submit form handler
   $postTweet.on('submit', (event) => {
     // prevent the default behaviour of the submit event (data submission and page refresh)
     event.preventDefault();
-    console.log('form has been submitted');
   
     // url encode
     const urlEncodedString = $postTweet.serialize();
-    console.log(urlEncodedString);
   
-    // alert on error
+    // error handling
     // repeating some code from char-counter .. opportunity to make this more DRY?
     const maxCount = 140;
     const currentCount = $postTweet.find("#tweet-text").val().length;
@@ -112,7 +95,6 @@ $(document).ready(() => {
       method: 'POST',
       data: urlEncodedString
     }).then(() => {
-      console.log('tweet posted successfully');
       $(".validation-errors").slideUp();
       loadTweets();
       $(".counter").text(140); // reset counter
