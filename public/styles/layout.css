@@ -25,16 +25,18 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- nav {
-  font-family: 'Bungee', sans-serif;
+ .page {
+  margin-top: 4.5em;
  }
+ 
 
- /* main container */
- .container {
+ main {
   display: flex;
-  padding-left: 5%;
-  padding-right: 5%;
   flex-direction: column;
   justify-content: center;
+  margin-right: 5%;
+  margin-right: 5%;
+  width: 55%;
   background-color: #f4f1ec;
+  float: right;
  }

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-self: flex-end;
   margin-top: 1em;
-  width: 70%
+  width: 100%;
  }
 
  .validation-errors {

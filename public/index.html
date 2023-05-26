@@ -30,9 +30,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
@@ -45,36 +45,38 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="main-header">
-    <div class="avatar">
-      <img src="/images/profile-hex.png">
-    </div>
-    <div>
-      <p><strong>First</strong> Last</p>
-    </div>
-  </header>
+  <div class="page">
+    
+    <!-- Header -->
+    <header class="main-header">
+      <div class="avatar">
+        <img src="/images/profile-hex.png">
+      </div>
+      <div>
+        <p><strong>First</strong> Last</p>
+      </div>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
+    <!-- Page-specific (main) content here -->
+    <main class="container">
 
-    <!-- Create a new tweet -->
-    <section class="new-tweet">
-      <div hidden class="validation-errors"></div>
-      <form id="post-tweet">
-        <label for="tweet-text"></label>
-        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <div class="new-tweet-bottom">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
+      <!-- Create a new tweet -->
+      <section class="new-tweet">
+        <div hidden class="validation-errors"></div>
+        <form id="post-tweet">
+          <label for="tweet-text"></label>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <div class="new-tweet-bottom">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
 
-    <!-- All tweets -->
-    <section class="tweet-container"></section>
-
-  </main>
+      <!-- All tweets -->
+      <section class="tweet-container"></section>
+    </main>
+  </div>
 </body>
 
 </html>

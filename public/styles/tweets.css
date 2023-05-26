@@ -1,7 +1,7 @@
 .tweet-container {
   margin-bottom: 1em;
   align-self: flex-end;
-  width: 80%
+  width: 100%
 }
 
 .tweet {
@@ -42,12 +42,13 @@ align-items: center;
 }
 
 #username {
-  opacity: 0.5;
+  opacity: 0.5; /* this isnt working */
 }
 
 .posted-tweet {
   display: flex;
   border-bottom: 5px solid #545149;
+  word-wrap: break-word; /* this isnt working */
 }
 
 .tweet-foot {

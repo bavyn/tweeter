@@ -1,15 +1,19 @@
 .main-header {
   display: flex;
-  height: 520px;
-  width: 100%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   color:#FFFFFF;
   background-color:#D89709;
   background-image: url(http://www.transparenttextures.com/patterns/foggy-birds.png);
+  width: 30%;
+  height: auto;
+  float: left;
+  margin-top: 1em;
+  margin-left: 5%;
+  padding: 1em 0 0;
 }
 
 .avatar {
-  padding: 150px 0 0 0;
+  padding-top: 1em;
 }
