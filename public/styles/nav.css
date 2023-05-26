@@ -3,7 +3,7 @@ nav {
   height: 4em;
   width: 100%;
   justify-content: space-between;
-  background-color: #4056A1;
+  background-color: transparent;
   color: #FFFFFF;
   position: fixed;
   top: 0;
@@ -28,4 +28,10 @@ nav {
 
 nav i {
   color: tomato;
+}
+
+@media only screen and (min-width:1024px) {
+  nav {
+    background-color: #4056A1;
+  }
 }

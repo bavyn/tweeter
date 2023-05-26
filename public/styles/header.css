@@ -1,19 +1,31 @@
 .main-header {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content:space-between;
   align-items: center;
   color:#FFFFFF;
   background-color:#D89709;
   background-image: url(http://www.transparenttextures.com/patterns/foggy-birds.png);
-  width: 30%;
-  height: auto;
-  float: left;
-  margin-top: 1em;
-  margin-left: 5%;
-  padding: 1em 0 0;
+  height: 17em;
+  width: 100%;
 }
 
 .avatar {
-  padding-top: 1em;
+  padding-top: 3em;
+}
+
+@media only screen and (min-width:1024px) {
+  .main-header {
+    width: 30%;
+    height: 15em;
+    float: left;
+    margin-top: 1em;
+    margin-left: 5%;
+    padding: 1em 0 0;
+    border-radius: 0.5em;
+  }
+
+  .avatar {
+    padding: 0;
+  }
 }

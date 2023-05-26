@@ -25,18 +25,24 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .page {
-  margin-top: 4.5em;
- }
- 
-
- main {
+ .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 5%;
   margin-right: 5%;
-  margin-right: 5%;
-  width: 55%;
   background-color: #f4f1ec;
+  width: 90%;
   float: right;
+ }
+
+ @media only screen and (min-width:1024px) {
+  .page {
+    margin-top: 4.5em;
+   }
+
+  .container {
+    width: 55%;
+    float: right;
+  }
  }

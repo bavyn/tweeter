@@ -1,7 +1,7 @@
 .tweet-container {
   margin-bottom: 1em;
   align-self: flex-end;
-  width: 100%
+  width: 100%;
 }
 
 .tweet {
@@ -9,17 +9,17 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  border: 2px solid #545149;
-  border-radius: 10px;
+  border: 0.1em solid #545149;
+  border-radius: 0.5em;
   margin: 2em 0 0 0;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
  }
 
 .tweet:hover {
-  box-shadow: 5px 5px #B6B3AB;
+  box-shadow: 0.3em 0.3em #B6B3AB;
   transition: 0.3s ease-in-out;
  }
 
@@ -28,26 +28,28 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
+  height: 1.75em;
 }
 
 .tweeter-info {
   display: flex;
-align-items: center;
+  align-items: center;
 }
 
 .post-avatar {
-  height: 40px;
-  padding-right: 10px;
+  height: 1.75em;
+  padding-right: 0.5em;
 }
 
-#username {
-  opacity: 0.5; /* this isnt working */
+.username {
+  opacity: 0.5;
 }
 
 .posted-tweet {
   display: flex;
-  border-bottom: 5px solid #545149;
+  border-bottom: 0.2em solid #545149;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   word-wrap: break-word; /* this isnt working */
 }
 
@@ -55,6 +57,8 @@ align-items: center;
   display: flex;
   justify-content: space-between;
   padding-top: 5px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 #flag:hover {
