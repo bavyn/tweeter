@@ -51,7 +51,7 @@
       <img src="/images/profile-hex.png">
     </div>
     <div>
-      <h2>Karma</h2>
+      <p><strong>First</strong> Last</p>
     </div>
   </header>
 
@@ -60,9 +60,11 @@
 
     <!-- Create a new tweet -->
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+      <h2 class="compose">Compose Tweet</h2>
+      <div hidden class="validation-errors"></div>
       <form id="post-tweet">
-        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+        <label for="tweet-text">"What are you humming about?"</label>
+        <textarea name="text" id="tweet-text"></textarea>
         <div class="new-tweet-bottom">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
