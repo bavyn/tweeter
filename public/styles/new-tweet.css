@@ -3,11 +3,7 @@
   flex-direction: column;
   align-self: flex-end;
   margin-top: 1em;
-  width: 80%
- }
-
- .compose {
-  margin: 0 0 0.5em 0;
+  width: 70%
  }
 
  .validation-errors {
